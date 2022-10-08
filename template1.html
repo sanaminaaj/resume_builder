@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script src="pdf.js"></script>
+    <div class="container mt-4" id="one">
+      <h1 class="text-center" style="color:#002B5B">Resume Builder</h1>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <div class="row">
+        <div class="form-group mt-1"><label for="name1">Name</label><input type="text" id="name1" placeholder="Enter here" class="form-control mt-1" required><label for="describe1">Describe yourself</label><input type="text" id="describe1" placeholder="Enter here" class="form-control mt-1" required><label for="gmail1">Gmail</label><input type="text" id="gmail1" placeholder="Enter here" class="form-control mt-1" required><label for="phone1">Phone</label><input type="text" id="phone1" placeholder="Enter here" class="form-control mt-1" required></div>
+        <div class="form-group mt-1" id="ed">
+          <hr><b>
+            <h1>Education</h1>
+          </b><label for=" ">Study Program</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 study1" required></textarea><label for="inst1">Institution</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 inst1" required></textarea>
+          <div id="inAddButton"><button type="button" class="btn btn-secondary mt-1" onclick="add1()">add</button></div>
+          <hr>
+        </div>
+        <div class="form-group mt-1" id="projects">
+          <hr><b>
+            <h1>Personal Projects</h1>
+          </b><label for="project">Project</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 project" required></textarea><label for="description">Description</label><textarea rows="3" placeholder="Enter here" class="form-control mt-1 description" required></textarea>
+          <div id="prAddButton"><button type="button" class="btn btn-secondary mt-1" onclick="add2()">add</button></div>
+          <hr>
+        </div>
+        <div class="form-group mt-1" id="internships">
+          <hr><b>
+            <h1>Internships</h1>
+          </b><label for="internship">Internship</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 internship" required></textarea><label for="Company">Company</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 company" required></textarea>
+          <div id="iAddButton"><button type="button" class="btn btn-secondary mt-1" onclick="add3()">add</button></div>
+          <hr>
+        </div>
+        <div class="form-group mt-1" id="skills">
+          <hr><b>
+            <h1>Skills</h1>
+          </b><label for="skill">Skill</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 skills" required></textarea>
+          <div id="sAddButton"><button type="button" class="btn btn-secondary mt-1" onclick="add4()">add</button></div>
+          <hr>
+        </div>
+        <div class="form-group mt-1" id="certificates">
+          <hr><b>
+            <h1>Certificates</h1>
+          </b><label for="certificate">Certificate</label><textarea rows="1" placeholder="Enter here" class="form-control mt-1 certificate" required></textarea><label for="description">Description</label><textarea rows="3" placeholder="Enter here" class="form-control mt-1 description2" required></textarea>
+          <div id="cAddButton"><button type="button" class="btn btn-secondary mt-1" onclick="add5()">add</button></div>
+          <hr>
+        </div>
+        <div class="form-group mt-1" id="interests">
+          <hr><b>
+            <h1>Interests</h1>
+          </b><label for="">Interest</label><textarea rows="1" id="interest" placeholder="Enter here" class="form-control mt-1 interests" required></textarea>
+          <div id="iAddButton2"><button type="button" class="btn btn-secondary mt-1" onclick="add6()">add</button></div>
+          <hr>
+        </div>
+<button class="btn btn-primary mt-4" id="generate" onclick="generate()" style="width: 100%;">generate</button>
+      </div>
+      <div id="two">
+        <div class="row">
+          <div class="col">
+            <h3 id="name2" class="heading">Name</h3>
+            <h4 id="describe2" style="font-style:roboto">Professional Title</h4><br><br>
+            <h3 id="education2"><u>EDUCATION</u></h3>
+            <div id="ed2">
+		<b><h3>Study Program</h3></b>
+              	<h4>Institution</h4>
+            </div>
+            <h3 id="project2"><u>PROJECTS</u></h3>
+            <div class="projects2" id="pr2"><b>
+                <h3>Project</h3>
+              </b></div>
+	    <h3 id="internship2"><u>INTERNSHIPS</u></h3>
+            <div class="internships2" id="in2"><b>
+                <h3>Internship</h3>
+              </b></div>
+          </div>
+           
+          <div class="col">
+            <p id="gmail2" style="text-align:right">abc@gmail.com <b><i class="fa fa-envelope" id="icon1"></i></b></p>
+            <p id="phone2" style="text-align:right">Phone Number <b><i class="fa fa-phone" id="icon2"></i></b></p>
+            <h3 id="skill2"><u>SKILLS</u></h3>
+            <div class="skills" id="skills2">
+		<b><button style="background-color: black;color:white;width:20%;border:none;border-radius:10px">Skill</button></b>
+	    </div>
+            <h3 id="certificate2"><u>CERTIFICATES</u></h3>
+            <div class="certificates" id="certificates2"><b>
+                <h3>Certificate</h3>
+              </b></div>
+            <h3 id="inter2"><u>INTERESTS</u></h3>
+            <div class="interests" id="interests2">
+		<b><button style="background-color: white;color:black;width:40%;border-color: grey;border-radius:10px">Interest</button></b>
+	    </div>
+          </div>
+		
+        </div>
+	
+      </div>
+	
+    </div>
+
+	<div class="two-1" style="text-align:center;">
+<h4>Change Heading Color:        <input type="color" id="color" name="color"> <br><button class="btn btn-warning" type="button" onclick="change1()">change color</button></h4>
+<h4>Change Content  Color:        <input type="color" id="color2" name="color"><br><button type="button" class="btn btn-warning"  onclick="change2()">change color</button></h4>
+<button class="btn btn-primary mt-4" id="download" onclick="download()" style="width: 100%;">download<i class="fa fa-download" style="font-size:15px"></i></button>
+	</div>
+	
+  </body>
+</html>

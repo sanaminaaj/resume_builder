@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Resume Builder</title>
+    		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    		
+    		<link rel="stylesheet" href="style3.css">
+		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  </head>
+  <body>
+    		<script src="pdf3.js"></script>
+		<div class="container mt-4" id="one">
+      				<h1 class="text-center" style="color:#002B5B">Resume Builder</h1>
+				
+      				<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+      				<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+     				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+      				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+				<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      		<div class="row">
+				<div class="form-group mt-1">
+				<label for="name1">Name</label>
+				<input type="text" id="name1" placeholder="Enter here" class="form-control mt-1" required>
+				<label for="describe1">Professional Title</label>
+				<input type="text" id="describe1" placeholder="Enter here" class="form-control mt-1" required>
+				<label for="gmail1">Gmail</label>
+				<input type="text" id="gmail1" placeholder="Enter here" class="form-control mt-1" required>
+				<label for="phone1">Phone</label>
+				<input type="text" id="phone1" placeholder="Enter here" class="form-control mt-1" required>
+				<label for="address1">Address</label>
+				<input type="text" id="address1" placeholder="Enter here" class="form-control mt-1" required>
+				<div class="form-group mt-1" id="skills">
+         				<hr><b><h3>Skills</h3></b>
+          				<label for="skill">Skill</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 skills" required></textarea>
+          				<div id="sAddButton">
+						<button type="button" class="btn btn-secondary mt-1" onclick="add4()">add</button>
+					</div>
+          				<hr>
+        			</div>
+				
+          			
+				<div class="form-group mt-1" id="languages">
+          				<hr><b>
+            				<h3>Languages</h3>
+          				</b>
+					<label for="">Language</label>
+					<textarea rows="1" id="interest" placeholder="Enter here" class="form-control mt-1 languages" required></textarea>
+          				<div id="lAddButton">
+						<button type="button" class="btn btn-secondary mt-1" onclick="add8()">add</button>
+					</div>
+          				<hr>
+        			</div>
+				 <div class="form-group mt-1" id="ed">
+          				<hr><b>
+            				<h3>Education</h3>
+         			        </b>
+					<label for=" ">Study Program</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 study1" required></textarea>
+					<label for="inst1">Institution</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 inst1" required></textarea>
+          				<div id="inAddButton">
+							<button type="button" class="btn btn-secondary mt-1" onclick="add1()">add</button>
+					</div>
+          				<hr>
+        			</div>
+				<div class="form-group mt-1" id="internships">
+          				<hr><b>
+           				<h3>Internships</h3>
+          				</b><label for="internship">Internship</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 internship" required></textarea>
+					<label for="Company">Company</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 company" required></textarea>
+          				<div id="iAddButton">
+						<button type="button" class="btn btn-secondary mt-1" onclick="add3()">add</button>
+					</div>
+          				<hr>
+        			</div>
+				<div class="form-group mt-1" id="certificates">
+          				<hr><b>
+            				<h3>Certificates</h3>
+          				</b>
+					<label for="certificate">Certificate</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 certificate" required></textarea>
+					<label for="description">Description</label>
+					<textarea rows="3" placeholder="Enter here" class="form-control mt-1 description2" required></textarea>
+          				<div id="cAddButton">
+						<button type="button" class="btn btn-secondary mt-1" onclick="add5()">add</button>
+					</div>
+          				<hr>
+        			</div>
+				 <div class="form-group mt-1" id="projects">
+          				<hr><b>
+            				<h3>Projects</h3>
+          				</b><label for="project">Project</label>
+					<textarea rows="1" placeholder="Enter here" class="form-control mt-1 project" required></textarea>
+					<label for="description">Description</label>
+					<textarea rows="3" placeholder="Enter here" class="form-control mt-1 description" required></textarea>
+          				<div id="prAddButton">
+						<button type="button" class="btn btn-secondary mt-1" onclick="add2()">add</button>
+					</div>
+          				<hr>
+       			
+	 			</div>
+		</div>
+		<button class="btn btn-primary mt-4" id="generate" onclick="generate()">generate</button>
+	</div>
+	<div id="two">
+			<div class="row">
+					<div class="col" style="width:30%;background-color:#25316D;color:white">
+						    <p id="gmail2"><b><i class="fa fa-envelope" id="icon1"></i> abc@gmail.com </b></p>
+            					    <p id="phone2"><b><i class="fa fa-phone" id="icon2"></i> Phone Number</b></p>
+						    <p id="address2"><b><i class="fa fa-map-marker" id="icon3"></i> Address</b></p>
+							<h3><b>SKILLS</b></h3>
+						    <div id="skills2">
+							
+							<b><button style="background-color: grey;color: white;width:20%;border:none;border-radius:10px">Skill</button></b>				
+			
+						    </div>
+							<h3><b>LANGUAGES</b></h3>
+						    <div id="languages2">
+								<b><button style="background-color: white;color: grey;width:20%;border:none;border-radius:10px">language</button></b>				
+			
+
+	
+						    </div>
+		
+	</div>
+					<div class="col" style="width:70%">
+						<h3 id="name2"><b>Name</b></h3>
+						<h4 id="describe2">Professional Title</h4><br>
+						<h3>EDUCATION</h3>
+            					<div id="ed2">
+							<h4>Study Program</h4>
+              						<h4>Institution</h4>
+            					</div><br>
+						<h3>INTERNSHIPS</h3>
+						<div id="internship2">
+							<h4>Title/Position</h4>
+							<h4>Company</h4>
+						</div>
+						<br>
+						<h3>CERTIFICATES</h3>
+            					<div class="certificates" id="certificates2">
+                					<h4>Certificate</h4>
+							<h4>Description</h4>
+              					
+						</div>	
+						<br>
+						<h3>PROJECTS</h3>
+            					<div class="projects2" id="pr2">
+                					<h4>Project</h4>
+             					</div>
+							
+					</div>
+			</div>
+	</div>
+<div class="two-1">
+				<button class="btn btn-primary mt-4" id="download" onclick="download()" style="width: 100%;">download</button>
+		</div>
+
+</body>
+</html>

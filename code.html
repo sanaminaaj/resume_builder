@@ -1,0 +1,9 @@
+let st1=document.getElementsByClassName("study1");
+	let in1=document.getElementsByClassName("inst1").value;
+	let str="";
+	console.log(st1.value);
+	for (let e of st1)
+	{
+		str=str  +`<p> ${e.value} </p>`;
+	}
+	document.getElementById("ed2").innerHTML=str;

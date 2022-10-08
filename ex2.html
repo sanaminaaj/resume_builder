@@ -1,0 +1,55 @@
+<div class="form-group mt-1" id="projects">
+				<hr>
+				<b><h1>Personal Projects</h1></b>
+				<label for="project">Project</label>
+				<textarea rows="1" placeholder="Enter here" class="form-control mt-1 project" required></textarea>
+				<label for="description">Description</label>
+				<textarea rows="3" placeholder="Enter here" class="form-control mt-1 description" required></textarea>
+				<div id="prAddButton">
+				<button type="button" class="btn btn-secondary mt-1" onclick="add2()">add</button>
+				</div>
+				<hr>
+</div>
+<button type="button" class="btn btn-secondary mt-1" onclick="generate()">gen</button>		
+<script>
+function add2()
+{
+	let newNode1=document.createElement("label");
+	newNode1.textContent='Project'; 
+	let newNode2=document.createElement("textarea");
+	newNode2.classList.add("form-control");
+	newNode2.classList.add("mt-1");
+	newNode2.setAttribute("rows",1);
+	newNode2.setAttribute("placeholder","Enter here");
+	newNode2.classList.add("project");
+
+	let newNode3=document.createElement("label");
+	newNode3.textContent='Description';
+	
+	let newNode4=document.createElement("textarea");
+	newNode4.classList.add("form-control");
+	newNode4.classList.add("mt-1");
+	newNode4.setAttribute("rows",3);
+	newNode4.setAttribute("placeholder","Enter here");
+	newNode4.classList.add("description");
+
+	let projects=document.getElementById("projects");
+	let add=document.getElementById("prAddButton");
+	projects.insertBefore(newNode1,add);
+	projects.insertBefore(newNode2,add);
+	projects.insertBefore(newNode3,add);
+	projects.insertBefore(newNode4,add);
+}
+function generate()
+{
+	let p=document.getElementsByClassName("project").value;
+	let d=document.getElementsByClassName("description").value;
+	console.log(p);
+	let s="";
+	for(let i=0;i<p.length-1;i++)
+	{
+		s=s+p[i]+" "+d[i];
+	}
+	console.log(s);
+}
+</script>

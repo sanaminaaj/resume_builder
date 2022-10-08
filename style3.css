@@ -1,0 +1,19 @@
+*{
+ page-break-inside: avoid;
+font-family:Ubuntu;
+margin: 0px;
+padding-top: 10px;
+line-spacing:0px;
+padding-left: 3px;
+padding-right:3px;
+padding-bottom:3px;
+}
+.column left{
+	border-right-style: solid;
+  	border-right-color: orange;
+	color: white;
+
+}
+.column right{
+color:#25316D;
+}

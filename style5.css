@@ -1,0 +1,10 @@
+*{
+margin: 10px;
+page-break-inside: avoid;
+
+}
+.vertical{
+width:1px;
+height:100%;
+background-color: green;
+}
